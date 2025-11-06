@@ -34,7 +34,7 @@ Una aplicación web moderna desarrollada en Angular para la gestión completa de
 ### Prerrequisitos
 
 - Node.js (versión 18 o superior)
-- 
+  
 - npm o yarn
 
 1. Clonar el repositorio
