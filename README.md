@@ -40,6 +40,7 @@ Una aplicación web moderna desarrollada en Angular para la gestión completa de
 1. Clonar el repositorio
    
    git clone https://github.com/FrancoChocou/TPAngularFinalizado.git
+   
    cd TPAngularFinalizado
    
 3. Instalar dependencias
