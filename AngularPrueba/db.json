@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "dni": "12345678",
+      "lastName": "Pérez",
+      "firstName": "Juan",
+      "email": "juan@email.com",
+      "cohort": "0",
+      "status": "activo",
+      "gender": "masculino",
+      "address": "abc123",
+      "phone": "000"
+    },
+    {
+      "id": "2",
+      "dni": "87654321",
+      "lastName": "Gómez",
+      "firstName": "María",
+      "email": "maria@email.com",
+      "cohort": "0",
+      "status": "activo",
+      "gender": "femenino",
+      "address": "abc123",
+      "phone": "000"
+    }
+  ]
+}

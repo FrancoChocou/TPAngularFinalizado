@@ -1,0 +1,66 @@
+<div class="container">
+  <!-- Header -->
+  <header class="app-header">
+    <h1 class="app-title">🎓 Gestión Académica</h1>
+    <p class="app-subtitle">Sistema de administración de estudiantes</p>
+  </header>
+
+  <!-- Formulario para agregar estudiante -->
+  <section class="glass-card">
+    <h2 class="section-title">➕ Agregar Nuevo Estudiante</h2>
+    <app-student-form (studentAdded)="onStudentAdded()"></app-student-form>
+  </section>
+
+  <!-- Lista de estudiantes -->
+  <section class="glass-card">
+    <h2 class="section-title">📋 Lista de Estudiantes Registrados</h2>
+    
+    <div class="table-container">
+      <table class="students-table">
+        <thead class="table-header">
+          <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+          <tr *ngFor="let student of students" 
+              (click)="selectStudent(student)"
+              [class.table-active]="selectedStudent?.id === student.id"
+              class="table-row">
+            <td>{{ student.id }}</td>
+            <td>{{ student.dni }}</td>
+            <td>{{ student.lastName }}</td>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.email }}</td>
+            <td class="actions-cell">
+              <button class="btn btn-danger btn-sm" 
+                      (click)="deleteStudent(student.id!); $event.stopPropagation()">
+                🗑️ Eliminar
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="students.length === 0">
+            <td colspan="6" class="no-data">
+              No hay estudiantes registrados. ¡Agrega el primero!
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Detalles del estudiante seleccionado -->
+  <div *ngIf="selectedStudent" class="glass-card edit-section">
+    <h2 class="section-title">✏️ Editar Estudiante</h2>
+    <app-student-edit 
+      [student]="selectedStudent"
+      (studentUpdated)="onStudentUpdated()"
+      (cancelEdit)="selectedStudent = undefined">
+    </app-student-edit>
+  </div>
+</div>

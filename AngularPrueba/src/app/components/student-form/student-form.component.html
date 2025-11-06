@@ -1,0 +1,43 @@
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">
+    <h5>Agregar Nuevo Estudiante</h5>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="addStudent()" class="row g-3">
+      <div class="col-md-3">
+        <label class="form-label">DNI *</label>
+        <input type="text" class="form-control" 
+               [(ngModel)]="newStudent.dni" name="dni" required
+               placeholder="Ingrese DNI">
+      </div>
+      
+      <div class="col-md-3">
+        <label class="form-label">Apellido *</label>
+        <input type="text" class="form-control" 
+               [(ngModel)]="newStudent.lastName" name="lastName" required
+               placeholder="Ingrese apellido">
+      </div>
+      
+      <div class="col-md-3">
+        <label class="form-label">Nombre *</label>
+        <input type="text" class="form-control" 
+               [(ngModel)]="newStudent.firstName" name="firstName" required
+               placeholder="Ingrese nombre">
+      </div>
+      
+      <div class="col-md-3">
+        <label class="form-label">Email *</label>
+        <input type="email" class="form-control" 
+               [(ngModel)]="newStudent.email" name="email" required
+               placeholder="Ingrese email">
+      </div>
+      
+      <div class="col-12">
+        <button type="submit" class="btn btn-success">
+          ➕ Agregar Estudiante
+        </button>
+        <small class="text-muted ms-3">* Campos obligatorios</small>
+      </div>
+    </form>
+  </div>
+</div>
