@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ApiService } from '../../services/api.service';
+import { FormsModule } from '@angular/forms';
 import { Student } from '../../models/student.model';
 
 @Component({
@@ -9,50 +8,53 @@ import { Student } from '../../models/student.model';
   templateUrl: './student-edit.component.html',
   styleUrls: ['./student-edit.component.css'],
   standalone: true,
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule] // ← Asegúrate de tener FormsModule
 })
 export class StudentEditComponent {
   @Input() student!: Student;
   @Output() studentUpdated = new EventEmitter<void>();
   @Output() cancelEdit = new EventEmitter<void>();
 
-  editando = false;
-  studentEditado: Student = {} as Student;
+  // Agrega esta propiedad
+  editando: boolean = false;
+  
+  // Objeto para almacenar los datos editados
+  studentEditado: Student = {
+    dni: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    cohort: '',
+    status: '',
+    gender: '',
+    address: '',
+    phone: ''
+  };
 
-  constructor(private apiService: ApiService) { }
-
+  // Método para iniciar edición
   iniciarEdicion(): void {
     this.editando = true;
+    // Copiar los datos actuales del estudiante
     this.studentEditado = { ...this.student };
   }
 
+  // Método para guardar cambios
   guardarCambios(): void {
-    if (this.isFormValid()) {
-      this.apiService.updateStudent(this.student.id!, this.studentEditado).subscribe({
-        next: () => {
-          this.editando = false;
-          this.studentUpdated.emit();
-          alert('Estudiante actualizado correctamente');
-        },
-        error: (error) => {
-          console.error('Error updating student:', error);
-          alert('Error al actualizar estudiante');
-        }
-      });
-    } else {
-      alert('Por favor complete todos los campos requeridos');
-    }
+    // Aquí deberías llamar al servicio para actualizar
+    this.studentUpdated.emit();
+    this.editando = false;
   }
 
+  // Método para cancelar edición
   cancelarEdicion(): void {
     this.editando = false;
     this.cancelEdit.emit();
   }
 
-  private isFormValid(): boolean {
-    return this.studentEditado.dni.trim() !== '' &&
-           this.studentEditado.lastName.trim() !== '' &&
-           this.studentEditado.firstName.trim() !== '' &&
-           this.studentEditado.email.trim() !== '';
+  // Si necesitas el método ngOnChanges para cuando cambie el student
+  ngOnChanges(): void {
+    if (this.student) {
+      this.studentEditado = { ...this.student };
+    }
   }
 }

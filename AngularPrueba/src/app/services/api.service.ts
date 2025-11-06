@@ -7,23 +7,32 @@ import { Student } from '../models/student.model';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://5620-181-230-219-190.ngrok.io/student';
+  private apiUrl = 'http://localhost:3001/students';
 
   constructor(private http: HttpClient) { }
 
+  // Obtener todos los estudiantes
   getAllStudents(): Observable<Student[]> {
-    return this.http.get<Student[]>(`${this.apiUrl}/students`);
+    return this.http.get<Student[]>(this.apiUrl);
   }
 
+  // Agregar nuevo estudiante
   addStudent(student: Student): Observable<Student> {
-    return this.http.post<Student>(`${this.apiUrl}/students`, student);
+    return this.http.post<Student>(this.apiUrl, student);
   }
 
+  // Actualizar estudiante
   updateStudent(id: number, student: Student): Observable<Student> {
-    return this.http.patch<Student>(`${this.apiUrl}/students/${id}`, student);
+    return this.http.put<Student>(`${this.apiUrl}/${id}`, student);
   }
 
+  // Eliminar estudiante
   deleteStudent(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/students/${id}`);
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+  }
+
+  // Obtener estudiante por ID
+  getStudent(id: number): Observable<Student> {
+    return this.http.get<Student>(`${this.apiUrl}/${id}`);
   }
 }

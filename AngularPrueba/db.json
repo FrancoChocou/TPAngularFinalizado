@@ -2,27 +2,51 @@
   "students": [
     {
       "id": "1",
-      "dni": "12345678",
-      "lastName": "Pérez",
-      "firstName": "Juan",
-      "email": "juan@email.com",
-      "cohort": "0",
+      "dni": "40123456",
+      "firstName": "Ana",
+      "lastName": "García",
+      "email": "ana.garcia@email.com",
+      "cohort": "2024A",
       "status": "activo",
-      "gender": "masculino",
-      "address": "abc123",
-      "phone": "000"
+      "gender": "femenino",
+      "address": "Calle 123, Ciudad",
+      "phone": "123-456-7890"
     },
     {
       "id": "2",
-      "dni": "87654321",
-      "lastName": "Gómez",
-      "firstName": "María",
-      "email": "maria@email.com",
-      "cohort": "0",
+      "dni": "35456789",
+      "firstName": "Luis",
+      "lastName": "Martínez",
+      "email": "luis.martinez@email.com",
+      "cohort": "2024B",
       "status": "activo",
+      "gender": "masculino",
+      "address": "Avenida 456, Pueblo",
+      "phone": "098-765-4321"
+    },
+    {
+      "id": "3",
+      "dni": "28987654",
+      "firstName": "Sofía",
+      "lastName": "Rodríguez",
+      "email": "sofia.rodriguez@email.com",
+      "cohort": "2024A",
+      "status": "inactivo",
       "gender": "femenino",
-      "address": "abc123",
-      "phone": "000"
+      "address": "Plaza 789, Villa",
+      "phone": "555-123-4567"
+    },
+    {
+      "id": "4",
+      "dni": "42345678",
+      "firstName": "Carlos",
+      "lastName": "López",
+      "email": "carlos.lopez@email.com",
+      "cohort": "2024C",
+      "status": "activo",
+      "gender": "masculino",
+      "address": "Boulevard 012, Metrópolis",
+      "phone": "444-987-6543"
     }
   ]
 }

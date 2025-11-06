@@ -1,12 +1,12 @@
 export interface Student {
   id?: number;
   dni: string;
-  lastName: string;
   firstName: string;
+  lastName: string;
   email: string;
-  cohort: string;
-  status: string;
-  gender: string;
-  address: string;
-  phone: string;
+  cohort?: string;
+  status?: string;
+  gender?: string;
+  address?: string;    // ← AGREGAR
+  phone?: string;      // ← AGREGAR
 }
