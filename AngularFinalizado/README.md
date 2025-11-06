@@ -1,59 +1,112 @@
-# TpAngularMigracion
+🎓 Sistema de Gestión de Estudiantes - Angular
+Una aplicación web moderna desarrollada en Angular para la gestión completa de estudiantes, con diseño glassmorphism y funcionalidades CRUD.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+✨ Características
+🚀 Diseño Moderno: Interfaz con efectos glassmorphism
 
-## Development server
+📱 Responsive: Adaptable a todos los dispositivos
 
-To start a local development server, run:
+🎯 CRUD Completo: Crear, Leer, Actualizar y Eliminar estudiantes
 
-```bash
+⚡ Angular 17: Desarrollado con la última versión de Angular
+
+🎨 Estilo Visual: Gradientes, animaciones y fuentes modernas
+
+📊 JSON Server: API simulada para desarrollo
+
+🛠️ Tecnologías Utilizadas
+Frontend: Angular 17, TypeScript, HTML5, CSS3
+
+Estilos: Glassmorphism, Gradientes, Animaciones CSS
+
+API: JSON Server (simulación)
+
+Fuentes: Google Fonts (Inter, Poppins)
+
+Iconos: Emojis y elementos visuales modernos
+
+🚀 Instalación y Ejecución
+Prerrequisitos
+Node.js (versión 18 o superior)
+
+npm o yarn
+
+Clonar el repositorio
+
+git clone https://github.com/FrancoChocou/TPAngularFinalizado.git
+
+cd TPAngularFinalizado
+
+Instalar dependencias
+
+npm install
+
+Ejecutar JSON Server (Terminal 1)
+
+json-server --watch db.json --port 3001
+
+Ejecutar Angular (Terminal 2)
+
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+📋 Funcionalidades Implementadas
 
-## Code scaffolding
+✅ Completadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Lista de estudiantes con diseño moderno
 
-```bash
-ng generate component component-name
-```
+Formulario para agregar nuevos estudiantes
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Edición en línea de estudiantes existentes
 
-```bash
-ng generate --help
-```
+Eliminación de estudiantes con confirmación
 
-## Building
+Diseño responsive y glassmorphism
 
-To build the project run:
+Validación de formularios
 
-```bash
-ng build
-```
+Manejo de errores
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+API simulada con JSON Server
 
-## Running unit tests
+🎯 Campos del Estudiante
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+DNI (Documento de identidad)
 
-```bash
-ng test
-```
+Nombre y Apellido
 
-## Running end-to-end tests
+Email
 
-For end-to-end (e2e) testing, run:
+Cohort (Promoción)
 
-```bash
-ng e2e
-```
+Estado (Activo/Inactivo)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Género
 
-## Additional Resources
+Dirección
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Teléfono
+
+🎨 Características de Diseño
+
+Glassmorphism: Efectos de vidrio esmerilado
+
+Gradientes: Fondos con degradados modernos
+
+Animaciones: Transiciones suaves y efectos hover
+
+Fuentes: Inter y Poppins de Google Fonts
+
+Colores: Palette profesional con buen contraste
+
+👨‍💻 Autor
+
+Franco Chocou
+
+GitHub: @FrancoChocou
+
+📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la MIT License.
+
+Proyecto desarrollado como trabajo práctico de Angular.
