@@ -32,19 +32,26 @@ Una aplicación web moderna desarrollada en Angular para la gestión completa de
 ## 🚀 Instalación y Ejecución
 
 ### Prerrequisitos
+
 - Node.js (versión 18 o superior)
+- 
 - npm o yarn
 
 1. Clonar el repositorio
+   
    git clone https://github.com/FrancoChocou/TPAngularFinalizado.git
    cd TPAngularFinalizado
-2. Instalar dependencias
+   
+3. Instalar dependencias
+   
    npm install
 
-4. Ejecutar JSON Server (Terminal 1)
+5. Ejecutar JSON Server (Terminal 1)
+   
    json-server --watch db.json --port 3001
 
-5. Ejecutar Angular (Terminal 2)
+7. Ejecutar Angular (Terminal 2)
+   
    ng serve
 
    📋 Funcionalidades Implementadas
