@@ -55,55 +55,55 @@ Una aplicación web moderna desarrollada en Angular para la gestión completa de
    
    ng serve
 
-   📋 Funcionalidades Implementadas
+📋 Funcionalidades Implementadas
    
 ✅ Completadas
 
-Lista de estudiantes con diseño moderno
+- Lista de estudiantes con diseño moderno
 
-Formulario para agregar nuevos estudiantes
+- Formulario para agregar nuevos estudiantes
 
-Edición en línea de estudiantes existentes
+- Edición en línea de estudiantes existentes
 
-Eliminación de estudiantes con confirmación
+- Eliminación de estudiantes con confirmación
 
-Diseño responsive y glassmorphism
+- Diseño responsive y glassmorphism
 
-Validación de formularios
+- Validación de formularios
 
-Manejo de errores
+- Manejo de errores
 
-API simulada con JSON Server
+- API simulada con JSON Server
 
 🎯 Campos del Estudiante
 
-DNI (Documento de identidad)
+- DNI (Documento de identidad)
 
-Nombre y Apellido
+- Nombre y Apellido
 
-Email
+- Email
 
-Cohort (Promoción)
+- Cohort (Promoción)
 
-Estado (Activo/Inactivo)
+- Estado (Activo/Inactivo)
 
-Género
+- Género
 
-Dirección
+- Dirección
 
-Teléfono
+- Teléfono
 
 🎨 Características de Diseño
 
-Glassmorphism: Efectos de vidrio esmerilado
+- Glassmorphism: Efectos de vidrio esmerilado
 
-Gradientes: Fondos con degradados modernos
+- Gradientes: Fondos con degradados modernos
 
-Animaciones: Transiciones suaves y efectos hover
+- Animaciones: Transiciones suaves y efectos hover
 
-Fuentes: Inter y Poppins de Google Fonts
+- Fuentes: Inter y Poppins de Google Fonts
 
-Colores: Palette profesional con buen contraste
+- Colores: Palette profesional con buen contraste
 
 👨‍💻 Autor
 
@@ -112,6 +112,7 @@ Franco Chocou
 GitHub: @FrancoChocou
 
 📄 Licencia
+
 Este proyecto es de código abierto y está disponible bajo la MIT License. 
 
-Proyecto desarrollado como trabajo práctico de Angular
+Proyecto desarrollado como trabajo práctico de Angular.
