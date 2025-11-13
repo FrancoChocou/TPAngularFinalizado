@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Student } from '../../models/student.model';
+import { ApiService } from '../../services/api.service'; 
 
 @Component({
   selector: 'app-student-edit',
@@ -17,8 +18,8 @@ export class StudentEditComponent {
 
   editando: boolean = false;
   
-  // Objeto para almacenar los datos editados
-  studentEditado: Student = {
+ // POR ESTO:
+studentEditado: Student = { 
     dni: '',
     firstName: '',
     lastName: '',
@@ -28,7 +29,10 @@ export class StudentEditComponent {
     gender: '',
     address: '',
     phone: ''
-  };
+};
+
+  
+  constructor(private apiService: ApiService) { }
 
   // Método para iniciar edición
   iniciarEdicion(): void {
@@ -37,11 +41,22 @@ export class StudentEditComponent {
     this.studentEditado = { ...this.student };
   }
 
-  // Método para guardar cambios
+ 
   guardarCambios(): void {
-    
-    this.studentUpdated.emit();
-    this.editando = false;
+    if (this.student.id) {
+      this.apiService.updateStudent(this.student.id, this.studentEditado).subscribe({
+        next: () => {
+          // Emitir el evento para actualizar la lista
+          this.studentUpdated.emit();
+          this.editando = false;
+          alert('Estudiante actualizado correctamente');
+        },
+        error: (error) => {
+          console.error('Error updating student:', error);
+          alert('Error al actualizar estudiante');
+        }
+      });
+    }
   }
 
   // Método para cancelar edición
@@ -50,7 +65,6 @@ export class StudentEditComponent {
     this.cancelEdit.emit();
   }
 
-  
   ngOnChanges(): void {
     if (this.student) {
       this.studentEditado = { ...this.student };

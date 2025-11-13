@@ -7,6 +7,6 @@ export interface Student {
   cohort?: string;
   status?: string;
   gender?: string;
-  address?: string;    // ← AGREGAR
-  phone?: string;      // ← AGREGAR
+  address?: string;    
+  phone?: string;      
 }

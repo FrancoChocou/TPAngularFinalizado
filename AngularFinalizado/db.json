@@ -1,30 +1,6 @@
 {
   "students": [
     {
-      "id": "1",
-      "dni": "40123456",
-      "firstName": "Ana",
-      "lastName": "García",
-      "email": "ana.garcia@email.com",
-      "cohort": "2024A",
-      "status": "activo",
-      "gender": "femenino",
-      "address": "Calle 123, Ciudad",
-      "phone": "123-456-7890"
-    },
-    {
-      "id": "2",
-      "dni": "35456789",
-      "firstName": "Luis",
-      "lastName": "Martínez",
-      "email": "luis.martinez@email.com",
-      "cohort": "2024B",
-      "status": "activo",
-      "gender": "masculino",
-      "address": "Avenida 456, Pueblo",
-      "phone": "098-765-4321"
-    },
-    {
       "id": "3",
       "dni": "28987654",
       "firstName": "Sofía",
@@ -47,6 +23,18 @@
       "gender": "masculino",
       "address": "Boulevard 012, Metrópolis",
       "phone": "444-987-6543"
+    },
+    {
+      "id": "859b",
+      "dni": "40254618",
+      "lastName": "chocou",
+      "firstName": "nacho",
+      "email": "nashe@gmail.com",
+      "cohort": "0",
+      "status": "activo",
+      "gender": "masculino",
+      "address": "abc123",
+      "phone": "000"
     }
   ]
 }
